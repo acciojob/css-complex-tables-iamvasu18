@@ -1,25 +1,33 @@
 /* your css code here. If applicable */
 
+/* Table border: explicit sides to match test expectation */
 table {
-  border: 1px solid orange;
+  border-style: solid;
+  /* top right bottom left -> 0 0 1px 1px */
+  border-width: 0 0 1px 1px;
+  border-color: orange;
   border-collapse: collapse;
   width: 100%;
 }
 
+/* Header background and text color */
 th {
   background-color: #888888; /* dark grey */
   color: white;
 }
 
+/* Cells: explicit border sides and padding to match test expectation */
 th, td {
   text-align: center;
-  border: 1px solid orange;
-
+  border-style: solid;
+  /* top right bottom left -> 1px 1px 0 0 */
+  border-width: 1px 1px 0 0;
+  border-color: orange;
   padding: 3px 5px;
 }
 
-/* Sub-total row text alignment */
-.sub-total-text {
+/* Sub-total row text alignment (test expects tr.sub-total-row td.sub-total-text to be right) */
+.sub-total-row td.sub-total-text {
   text-align: right;
   font-weight: bold;
 }
