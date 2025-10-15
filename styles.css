@@ -19,7 +19,7 @@ th, td {
 }
 
 /* Sub-total row text alignment */
-.sub-total-row {
+.sub-total-text {
   text-align: right;
   font-weight: bold;
 }
